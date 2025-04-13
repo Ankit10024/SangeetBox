@@ -3,14 +3,12 @@ import { buttonVariants } from "../../components/ui/button";
 import { ScrollArea } from "../../components/ui/scroll-area";
 import { cn } from "../../lib/utils";
 import { useMusicStore } from "../../stores/useMusicStore";
-import { SignedIn, useClerk } from "@clerk/clerk-react";
-//import { LogoutButton } from "../../components/LogoutButton";
+import { SignedIn } from "@clerk/clerk-react";
+// import { LogoutButton } from "../../components/LogoutButton"; // Uncomment when needed
 import { HomeIcon, Library, MessageCircle } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Album } from "../../types";
-import { handleApiError } from "../../lib/axios";
-import toast from "react-hot-toast";
+
 const LeftSidebar = () => {
 	const { albums, fetchAlbums, isLoading } = useMusicStore();
 
@@ -18,12 +16,9 @@ const LeftSidebar = () => {
 		fetchAlbums();
 	}, [fetchAlbums]);
 
-	console.log({ albums });
-
 	return (
 		<div className='h-full flex flex-col gap-2'>
 			{/* Navigation menu */}
-
 			<div className='rounded-lg bg-zinc-900 p-4'>
 				<div className='space-y-2'>
 					<Link
@@ -95,4 +90,5 @@ const LeftSidebar = () => {
 		</div>
 	);
 };
+
 export default LeftSidebar;

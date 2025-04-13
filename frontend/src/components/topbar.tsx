@@ -1,4 +1,4 @@
-import { SignedOut, UserButton } from "@clerk/clerk-react";
+import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
 import { LayoutDashboardIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 import SignInOAuthButtons from "./SignInOAuthButtons";
@@ -12,30 +12,38 @@ const Topbar = () => {
   return (
     <div
       className='flex items-center justify-between p-4 sticky top-0 bg-zinc-900/75 
-      backdrop-blur-md z-10'
+      backdrop-blur-md z-10 border-b border-zinc-800'
     >
-      <div className='flex gap-2 items-center'>
-        <img src='/spotify.png' className='size-8' alt='Spotify logo' />
-        <span className='font-semibold'>SangeetBox</span>
-      </div>
+      {/* Clickable logo that routes to home */}
+      <Link to="/" className='flex gap-2 items-center'>
+        <img src='/SangeetBox.png' className='size-8' alt='SangeetBox logo' />
+        <span className='font-semibold text-white'>SangeetBox</span>
+      </Link>
+
       <div className='flex items-center gap-4'>
+        {/* Show admin dashboard button if user is admin */}
         {isAdmin && (
           <Link 
             to={"/admin"} 
-            className={cn(buttonVariants({ variant: "outline" }))}
+            className={cn(buttonVariants({ variant: "outline" }), "text-white border-zinc-600")}
           >
             <LayoutDashboardIcon className='size-4 mr-2' />
             Admin Dashboard
           </Link>
         )}
 
+        {/* Show Sign In buttons when logged out */}
         <SignedOut>
           <SignInOAuthButtons />
         </SignedOut>
 
-        <UserButton />
+        {/* Show Clerk User Button when logged in */}
+        <SignedIn>
+          <UserButton afterSignOutUrl="/" />
+        </SignedIn>
       </div>
     </div>
   );
 };
+
 export default Topbar;
