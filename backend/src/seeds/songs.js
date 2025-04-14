@@ -29,7 +29,7 @@ const songs = [
 	{
 		title: "Ahista Ahista",
 		artist: "KaZanami",
-		imageUrl: "/cover-images/4.png",
+		imageUrl: "/cover-images/4.jpg",
 		audioUrl: "/songs/4.mp3",
 		duration: 24, // 0:24
 	},
