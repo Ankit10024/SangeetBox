@@ -15,149 +15,168 @@ const seedDatabase = async () => {
 
 		// First, create all songs
 		const createdSongs = await Song.insertMany([
+			
 			{
 				title: "Ishq Hai",
-				artist: "	Aarav",
+				artist: "Anurag Saikia",
 				imageUrl: "/cover-images/1.jpg",
 				audioUrl: "/songs/1.mp3",
 				plays: Math.floor(Math.random() * 5000),
 				duration: 39, // 0:39
 			},
 			{
-				title: "Ride It",
-				artist: "Jay Sean",
-				imageUrl: "/cover-images/5.jpg",
-				audioUrl: "/songs/2.mp3",
+				title: "Tere bina",
+				artist: "Shreea Kaur",
+				imageUrl: "/cover-images/16.jpg",
+				audioUrl: "/songs/16.mp3",
 				plays: Math.floor(Math.random() * 5000),
-				duration: 36, // 0:36
+				duration: 41, // 0:41
 			},
 			{
 				title: "Homa Dol",
-				artist: "Saaz Lambardz,Shreya Ghoshal",
+				artist: "Saad Lamjarred, Neeti Mohan, Rajat Nagpal",
 				imageUrl: "/cover-images/3.jpg",
 				audioUrl: "/songs/3.mp3",
 				plays: Math.floor(Math.random() * 5000),
-				duration: 36, // 0:36
+				duration: 24, // 0:24
 			},
 			{
-				title: "Neon Dreams",
-				artist: "Cyber Pulse",
-				imageUrl: "/cover-images/13.jpg",
-				audioUrl: "/songs/13.mp3",
-				plays: Math.floor(Math.random() * 5000),
-				duration: 39, // 0:39
-			},
-			{
-				title: "Summer Daze",
-				artist: "Coastal Kids",
+				title: "Ahista Ahista",
+				artist: "KaZanami",
 				imageUrl: "/cover-images/4.jpg",
 				audioUrl: "/songs/4.mp3",
 				plays: Math.floor(Math.random() * 5000),
 				duration: 24, // 0:24
 			},
 			{
-				title: "Ocean Waves",
-				artist: "Coastal Drift",
+				title: "Agar tum Saath Ho",
+				artist: "Arijit Singh, Alka Yagnik",
+				imageUrl: "/cover-images/5.jpg",
+				audioUrl: "/songs/5.mp3",
+				plays: Math.floor(Math.random() * 5000),
+				duration: 36, // 0:36
+			},
+			{
+				title: "Jhol",
+				artist: "Maanu,Annural",
+				imageUrl: "/cover-images/6.jpg",
+				audioUrl: "/songs/6.mp3",
+				plays: Math.floor(Math.random() * 5000),
+				duration: 240, // 0:40
+			},
+			
+			{
+				title: "Main Ishq Likhun",
+				artist: "Faheem Abdullah",
+				imageUrl: "/cover-images/7.jpg",
+				audioUrl: "/songs/7.mp3",
+				plays: Math.floor(Math.random() * 5000),
+				duration: 128, // 0:28
+			},
+			{
+				title: "Ek Jaisa Haal tere mera",
+				artist: "Arijit Singh",
+				imageUrl: "/cover-images/8.jpg",
+				audioUrl: "/songs/8.mp3",
+				plays: Math.floor(Math.random() * 5000),
+				duration: 228, // 0:28
+			},
+			
+			{
+				title: "Tujh me rab dikhta hai",
+				artist: "Roop Kumar Rathod",
 				imageUrl: "/cover-images/9.jpg",
 				audioUrl: "/songs/9.mp3",
 				plays: Math.floor(Math.random() * 5000),
-				duration: 28, // 0:28
+				duration: 229, // 0:29
 			},
 			{
-				title: "Crystal Rain",
-				artist: "Echo Valley",
-				imageUrl: "/cover-images/16.jpg",
-				audioUrl: "/songs/16.mp3",
-				plays: Math.floor(Math.random() * 5000),
-				duration: 39, // 0:39
-			},
-			{
-				title: "Starlight",
-				artist: "Luna Bay",
+				title: "Tu hai to Main hoon",
+				artist: "Arijit Singh",
 				imageUrl: "/cover-images/10.jpg",
 				audioUrl: "/songs/10.mp3",
 				plays: Math.floor(Math.random() * 5000),
-				duration: 30, // 0:30
+				duration: 117, // 0:17
 			},
 			{
-				title: "Stay With Me",
-				artist: "Sarah Mitchell",
-				imageUrl: "/cover-images/1.jpg",
-				audioUrl: "/songs/1.mp3",
+				title: "Milenge Hum Nhi",
+				artist: "Kunal Verma",
+				imageUrl: "/cover-images/11.jpg",
+				audioUrl: "/songs/11.mp3",
 				plays: Math.floor(Math.random() * 5000),
-				duration: 46, // 0:46
+				duration: 239, // 0:39
 			},
 			{
-				title: "Midnight Drive",
-				artist: "The Wanderers",
-				imageUrl: "/cover-images/2.jpg",
-				audioUrl: "/songs/2.mp3",
-				plays: Math.floor(Math.random() * 5000),
-				duration: 41, // 0:41
-			},
-			{
-				title: "Moonlight Dance",
-				artist: "Silver Shadows",
-				imageUrl: "/cover-images/14.jpg",
-				audioUrl: "/songs/14.mp3",
-				plays: Math.floor(Math.random() * 5000),
-				duration: 27, // 0:27
-			},
-			{
-				title: "Lost in Tokyo",
-				artist: "Electric Dreams",
-				imageUrl: "/cover-images/3.jpg",
-				audioUrl: "/songs/3.mp3",
-				plays: Math.floor(Math.random() * 5000),
-				duration: 24, // 0:24
-			},
-			{
-				title: "Neon Tokyo",
-				artist: "Future Pulse",
-				imageUrl: "/cover-images/17.jpg",
-				audioUrl: "/songs/17.mp3",
-				plays: Math.floor(Math.random() * 5000),
-				duration: 39, // 0:39
-			},
-			{
-				title: "Purple Sunset",
-				artist: "Dream Valley",
+				title: "Kanha",
+				artist: "Shreya Ghoshal",
 				imageUrl: "/cover-images/12.jpg",
 				audioUrl: "/songs/12.mp3",
 				plays: Math.floor(Math.random() * 5000),
-				duration: 17, // 0:17
+				duration: 127, // 0:27
+			},
+			{
+				title: "Fell for You",
+				artist: "Shubh",
+				imageUrl: "/cover-images/13.jpg",
+				audioUrl: "/songs/13.mp3",
+				plays: Math.floor(Math.random() * 5000),
+				duration: 136, // 0:36
+			},
+			{
+				title: "Pehla tere nain dekdhe",
+				artist: "Josh Brar",
+				imageUrl: "/cover-images/14.jpg",
+				audioUrl: "/songs/14.mp3",
+				plays: Math.floor(Math.random() * 5000),
+				duration: 139, // 0:39
+			},
+			{
+				title: "Espresso",
+				artist: "Sabrina",
+				imageUrl: "/cover-images/15.jpg",
+				audioUrl: "/songs/15.mp3",
+				plays: Math.floor(Math.random() * 5000),
+				duration: 139, // 0:39
+			},
+			{
+				title: "Ride It",
+				artist: "Jay Sean",
+				imageUrl: "/cover-images/2.jpg",
+				audioUrl: "/songs/2.mp3",
+				plays: Math.floor(Math.random() * 5000),
+				duration: 129, // 0:29
 			},
 		]);
 
 		// Create albums with references to song IDs
 		const albums = [
 			{
-				title: "Urban Nights",
+				title: "Happy Vibes",
 				artist: "Various Artists",
 				imageUrl: "/albums/1.jpg",
 				releaseYear: 2024,
-				songs: createdSongs.slice(0, 4).map((song) => song._id),
+				songs: createdSongs.slice(5, 9).map((song) => song._id),
 			},
 			{
-				title: "Coastal Dreaming",
+				title: "Punjabi Beats",
+				artist: "Various Artists",
+				imageUrl: "/albums/14.jpg",
+				releaseYear: 2024,
+				songs: createdSongs.slice(13, 15).map((song) => song._id),
+			},
+			{
+				title: "English Classics",
 				artist: "Various Artists",
 				imageUrl: "/albums/2.jpg",
 				releaseYear: 2024,
-				songs: createdSongs.slice(4, 8).map((song) => song._id),
+				songs: createdSongs.slice(15, 17).map((song) => song._id),
 			},
 			{
-				title: "Midnight Sessions",
+				title: "Romantic Melodies",
 				artist: "Various Artists",
-				imageUrl: "/albums/3.jpg",
+				imageUrl: "/albums/8.jpg",
 				releaseYear: 2024,
-				songs: createdSongs.slice(8, 11).map((song) => song._id),
-			},
-			{
-				title: "Eastern Dreams",
-				artist: "Various Artists",
-				imageUrl: "/albums/4.jpg",
-				releaseYear: 2024,
-				songs: createdSongs.slice(11, 14).map((song) => song._id),
+				songs: createdSongs.slice(0, 4).map((song) => song._id),
 			},
 		];
 

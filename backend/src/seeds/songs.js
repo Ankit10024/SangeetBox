@@ -6,10 +6,17 @@ config();
 
 const songs = [
 	{
-		title: "Ride It",
-		artist: "Jey Sean",
-		imageUrl: "/cover-images/2.jpg",
-		audioUrl: "/songs/2.mp3",
+		title: "Ishq Hai",
+		artist: "Anurag Saikia",
+		imageUrl: "/cover-images/1.jpg",
+		audioUrl: "/songs/1.mp3",
+		duration: 39, // 0:39
+	},
+	{
+		title: "Tere bina",
+		artist: "Shreea Kaur",
+		imageUrl: "/cover-images/16.jpg",
+		audioUrl: "/songs/16.mp3",
 		duration: 41, // 0:41
 	},
 	{
@@ -22,107 +29,95 @@ const songs = [
 	{
 		title: "Ahista Ahista",
 		artist: "KaZanami",
-		imageUrl: "/cover-images/4.jpg",
+		imageUrl: "/cover-images/4.png",
 		audioUrl: "/songs/4.mp3",
 		duration: 24, // 0:24
 	},
 	{
-		title: "Neon Lights",
-		artist: "Night Runners",
+		title: "Agar tum Saath Ho",
+		artist: "Arijit Singh, Alka Yagnik",
 		imageUrl: "/cover-images/5.jpg",
 		audioUrl: "/songs/5.mp3",
 		duration: 36, // 0:36
 	},
 	{
-		title: "Mountain High",
-		artist: "The Wild Ones",
+		title: "Jhol",
+		artist: "Maanu,Annural",
 		imageUrl: "/cover-images/6.jpg",
 		audioUrl: "/songs/6.mp3",
-		duration: 40, // 0:40
+		duration: 240, // 0:40
 	},
+	
 	{
-		title: "City Rain",
-		artist: "Urban Echo",
+		title: "Main Ishq Likhun",
+		artist: "Faheem Abdullah",
 		imageUrl: "/cover-images/7.jpg",
 		audioUrl: "/songs/7.mp3",
-		duration: 39, // 0:39
+		duration: 128, // 0:28
 	},
 	{
-		title: "Desert Wind",
-		artist: "Sahara Sons",
+		title: "Ek Jaisa Haal tere mera",
+		artist: "Arijit Singh",
 		imageUrl: "/cover-images/8.jpg",
 		audioUrl: "/songs/8.mp3",
-		duration: 28, // 0:28
+		duration: 228, // 0:28
 	},
+	
 	{
-		title: "Ocean Waves",
-		artist: "Coastal Drift",
+		title: "Tujh me rab dikhta hai",
+		artist: "Roop Kumar Rathod",
 		imageUrl: "/cover-images/9.jpg",
 		audioUrl: "/songs/9.mp3",
-		duration: 28, // 0:28
+		duration: 229, // 0:29
 	},
 	{
-		title: "Starlight",
-		artist: "Luna Bay",
-		imageUrl: "/cover-images/10.jpg",
+		title: "Tu hai to Main hoon",
+		artist: "Arijit Singh",
+		imageUrl: "/cover-images/10.jpeg",
 		audioUrl: "/songs/10.mp3",
-		duration: 30, // 0:30
+		duration: 117, // 0:17
 	},
 	{
-		title: "Winter Dreams",
-		artist: "Arctic Pulse",
+		title: "Milenge Hum Nhi",
+		artist: "Kunal Verma",
 		imageUrl: "/cover-images/11.jpg",
 		audioUrl: "/songs/11.mp3",
-		duration: 29, // 0:29
+		duration: 239, // 0:39
 	},
 	{
-		title: "Purple Sunset",
-		artist: "Dream Valley",
+		title: "Kanha",
+		artist: "Shreya Ghoshal",
 		imageUrl: "/cover-images/12.jpg",
 		audioUrl: "/songs/12.mp3",
-		duration: 17, // 0:17
+		duration: 127, // 0:27
 	},
 	{
-		title: "Neon Dreams",
-		artist: "Cyber Pulse",
+		title: "Fell for You",
+		artist: "Shubh",
 		imageUrl: "/cover-images/13.jpg",
 		audioUrl: "/songs/13.mp3",
-		duration: 39, // 0:39
+		duration: 136, // 0:36
 	},
 	{
-		title: "Moonlight Dance",
-		artist: "Silver Shadows",
+		title: "Pehla tere nain dekdhe",
+		artist: "Josh Brar",
 		imageUrl: "/cover-images/14.jpg",
 		audioUrl: "/songs/14.mp3",
-		duration: 27, // 0:27
+		duration: 139, // 0:39
 	},
 	{
-		title: "Urban Jungle",
-		artist: "City Lights",
+		title: "Espresso",
+		artist: "Sabrina",
 		imageUrl: "/cover-images/15.jpg",
 		audioUrl: "/songs/15.mp3",
-		duration: 36, // 0:36
+		duration: 139, // 0:39
 	},
 	{
-		title: "Crystal Rain",
-		artist: "Echo Valley",
-		imageUrl: "/cover-images/16.jpg",
-		audioUrl: "/songs/16.mp3",
-		duration: 39, // 0:39
-	},
-	{
-		title: "Neon Tokyo",
-		artist: "Future Pulse",
-		imageUrl: "/cover-images/17.jpg",
-		audioUrl: "/songs/17.mp3",
-		duration: 39, // 0:39
-	},
-	{
-		title: "Midnight Blues",
-		artist: "Jazz Cats",
-		imageUrl: "/cover-images/18.jpg",
-		audioUrl: "/songs/18.mp3",
-		duration: 29, // 0:29
+		title: "Ride It",
+		artist: "Jay Sean",
+		imageUrl: "/cover-images/2.jpg",
+		audioUrl: "/songs/2.mp3",
+		duration: 129, // 0:29
 	},
 ];
 

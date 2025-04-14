@@ -11,7 +11,7 @@ const Topbar = () => {
 
   return (
     <div
-      className='flex items-center justify-between p-4 sticky top-0 bg-zinc-900/75 
+      className='flex items-center justify-between p-4 sticky top-0 bg-zinc-800/75 
       backdrop-blur-md z-10 border-b border-zinc-800'
     >
       {/* Clickable logo that routes to home */}
