@@ -1,29 +1,35 @@
 import { clerkClient } from "@clerk/express";
 
 export const protectRoute = async (req, res, next) => {
-	console.log("Auth headers:", req.headers);
-	console.log("Clerk auth object:", req.auth);
-	
-	if (!req.auth.userId) {
-		console.log("Authentication failed - no userId in auth object");
-		return res.status(401).json({ message: "Unauthorized - you must be logged in" });
-	}
-	
-	console.log("Authenticated user ID:", req.auth.userId);
-	next();
+  try {
+    if (!req.auth || !req.auth.userId) {
+      console.log("Authentication failed - no userId in auth object");
+      return res.status(401).json({ message: "Unauthorized - you must be logged in" });
+    }
+
+    console.log("Authenticated user ID:", req.auth.userId);
+    next();
+  } catch (error) {
+    console.error("Error in protectRoute:", error);
+    res.status(500).json({ message: "Internal server error" });
+  }
 };
 
 export const requireAdmin = async (req, res, next) => {
-	try {
-		const currentUser = await clerkClient.users.getUser(req.auth.userId);
-		const isAdmin = process.env.ADMIN_EMAIL === currentUser.primaryEmailAddress?.emailAddress;
+  try {
+    const currentUser = await clerkClient.users.getUser(req.auth.userId);
+    console.log("process.env.ADMIN_EMAIL:", process.env.ADMIN_EMAIL);
+    console.log("currentUser.primaryEmailAddress.emailAddress:", currentUser.primaryEmailAddress?.emailAddress);
 
-		if (!isAdmin) {
-			return res.status(403).json({ message: "Unauthorized - you must be an admin" });
-		}
+    const isAdmin = process.env.ADMIN_EMAIL === currentUser.primaryEmailAddress?.emailAddress;
 
-		next();
-	} catch (error) {
-		next(error);
-	}
+    if (!isAdmin) {
+      console.log("Admin check failed: emails do not match.");
+      return res.status(403).json({ message: "Unauthorized - you must be an admin" });
+    }
+
+    next();
+  } catch (error) {
+    next(error);
+  }
 };

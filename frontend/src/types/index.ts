@@ -41,3 +41,9 @@ export interface User {
 	fullName: string;
 	imageUrl: string;
 }
+
+export interface Playlist {
+	_id: string;
+	name: string;
+	songs?: Song[];
+}

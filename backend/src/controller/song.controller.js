@@ -80,3 +80,20 @@ export const getTrendingSongs = async (req, res, next) => {
 		next(error);
 	}
 };
+
+export const searchSongs = async (req, res, next) => {
+	try {
+		const { query } = req.query;
+		if (!query) {
+			return res.status(400).json({ message: "Query parameter is required" });
+		}
+		// Case-insensitive regex search on title and artist fields
+		const regex = new RegExp(query, "i");
+		const songs = await Song.find({
+			$or: [{ title: regex }, { artist: regex }],
+		}).sort({ createdAt: -1 });
+		res.json(songs);
+	} catch (error) {
+		next(error);
+	}
+};
